@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.66.3",
+    "@react-three/fiber": "^8.13.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.8",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-three": "^0.9.7",
+    "react-three-fiber": "^6.0.13",
+    "sass": "^1.62.0",
+    "three": "^0.152.2",
     "typescript": "5.0.4"
   }
 }

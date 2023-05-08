@@ -1,0 +1,88 @@
+@import '../../../../../../../styles/libs/variables';
+
+
+.burgerMenu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.burgerMenuIcon {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 6px;
+    width: 40px;
+    background-color: $secondary-color;
+    top: 20px;
+
+    &:before {
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background-color: $secondary-color;
+        content: '';
+        top: -15px;
+    }
+
+    &:after {
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background-color: $secondary-color;
+        content: '';
+        top: 15px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &Open {
+        transition-duration: 0.5s;
+        background: transparent;
+
+        &:before {
+            transform: rotateZ(45deg) scaleX(1.25) translate(7px, 13px);
+        }
+
+        &:after {
+            transform: rotateZ(-45deg) scaleX(1.25) translate(7px, -12px);
+        }
+    }
+}
+
+@media screen and (min-width: $media-sm) {
+    .burgerMenu {
+        width: 60px;
+        height: 60px;
+    }
+    .burgerMenuIcon {
+        height: 8px;
+        width: 50px;
+        top: 30px;
+    
+        &:before {
+            width: 60px;
+            height: 8px;
+            top: -20px;
+        }
+    
+        &:after {
+            width: 60px;
+            height: 8px;
+            top: 20px;
+        }
+
+        &Open {    
+            &:before {
+                transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+            }
+    
+            &:after {
+                transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+            }
+        }
+    }
+}

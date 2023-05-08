@@ -1,0 +1,98 @@
+@import '../../../../../styles/libs/variables';
+@import '../../../../../styles/libs/mixins';
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include mx-auto;
+}
+
+.heroWrapper {
+    position: absolute;
+    inset: 0;
+    top: 160px;
+    max-width: 1280px;
+    @include mx-auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.heroGradientWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroGradientPoint {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: $secondary-color;
+}
+
+.heroGradient {
+    width: 0.25rem;
+    height: 20rem;
+    background: $secondary-color;
+    background: -webkit-linear-gradient(-90deg, $secondary-color 0%, rgba(60, 51, 80, 0) 100%);
+}
+
+.heroContentWrapper {
+    @include mt(2);
+    min-height: 20rem;
+    border-radius: 25px;
+    background: $secondary-color;
+    background: -webkit-linear-gradient(-90deg, $secondary-color 0%, $secondary-color 40%, rgba(60, 51, 80, 0) 100%);
+    @include p(8);
+}
+
+.heroTitle {
+    @include mt(4);
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(25, 25, 25);
+    text-align: center;
+    margin-bottom: 1rem;
+
+    &__name {
+        color: rgb(25, 25, 25);
+    }
+}
+
+.heroText {
+    @include mt(4);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.mouseWrapper {
+    position: absolute;
+    bottom: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse {
+    width: 35px;
+    height: 64px;
+    border-radius: 20px;
+    border: 4px solid $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include p(2);
+}
+
+.mouseWell {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $secondary-color;
+}

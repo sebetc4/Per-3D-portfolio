@@ -1,0 +1,125 @@
+@import '../../../../../styles/libs/variables';
+@import '../../../../../styles/libs/mixins';
+
+.navbarContainer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include py(1);
+    @include px(4);
+    z-index: 20;
+    background-color: $primary-color;
+}
+
+.navbarWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.navbarLogo {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &__secondaryText {
+        @include mt(2);
+        display: none;
+    }
+}
+
+.navbarList {
+    display: none;
+}
+
+.navbarListLink {
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: $secondary-color;
+
+    &Active {
+        color: white;
+    }
+    &:hover {
+        color: white;
+    }
+}
+
+.mobileButtonContainer {
+    display: 'flex';
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    @include p(6);
+    min-width: 140px;
+    background: linear-gradient(to right, #434343, #000000);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    &Open {
+        display: flex;
+    }
+}
+
+.mobileMenuBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.mobileMenuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    z-index: 9;
+    gap: 1rem;
+}
+
+.mobileMenuLink {
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: $secondary-color;
+    &:hover {
+        color: white;
+    }
+}
+
+@media screen and (min-width: $media-sm) {
+    .navbarContainer {
+        @include px(8);
+    }
+    .navbarLogo {
+        font-size: 1.1rem;
+        }
+
+    .navbarLogo__secondaryText {
+        display: block;
+    }
+}
+
+@media screen and (min-width: $media-md) {
+    .navbarList {
+        display: flex;
+        gap: 3rem;
+    }
+    .mobileButtonContainer {
+        display: none;
+    }
+}

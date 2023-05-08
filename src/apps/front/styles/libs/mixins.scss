@@ -1,0 +1,53 @@
+// Margin
+@mixin m($value) {
+    margin: calc($value * 0.25rem);
+}
+@mixin mt($value) {
+    margin-top: calc($value * 0.25rem);
+}
+@mixin mr($value) {
+    margin-right: calc($value * 0.25rem);
+}
+@mixin mb($value) {
+    margin-bottom: calc($value * 0.25rem);
+}
+@mixin ml($value) {
+    margin-left: calc($value * 0.25rem);
+}
+@mixin my($value) {
+    margin-top: calc($value * 0.25rem);
+    margin-bottom: calc($value * 0.25rem);
+}
+@mixin mx($value) {
+    margin-left: calc($value * 0.25rem);
+    margin-right: calc($value * 0.25rem);
+}
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+// Padding
+@mixin p($value) {
+    padding: calc($value * 0.25rem);
+}
+@mixin pt($value) {
+    padding-top: calc($value * 0.25rem);
+}
+@mixin pr($value) {
+    padding-right: calc($value * 0.25rem);
+}
+@mixin pb($value) {
+    padding-bottom: calc($value * 0.25rem);
+}
+@mixin pl($value) {
+    padding-left: calc($value * 0.25rem);
+}
+@mixin py($value) {
+    padding-top: calc($value * 0.25rem);
+    padding-bottom: calc($value * 0.25rem);
+}
+@mixin px($value) {
+    padding-left: calc($value * 0.25rem);
+    padding-right: calc($value * 0.25rem);
+}
+//
